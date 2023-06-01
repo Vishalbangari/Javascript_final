@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Vishal Bangari</title>
+        <style>
+            .container{
+                display: grid;
+                grid-template-columns: 1fr 10fr 1fr 1fr;
+                column-gap: 5px;
+
+            }
+            img{
+                border-radius: 50%;
+            }
+            .p1{
+                font-size: 80px;
+                color: brown;
+                font-weight: bolder;
+                padding-top:50px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div>
+            <img src ="C:\Users\visha\Downloads\download.jpg" width="250" height="250">
+            </div>
+            <div>
+                <p class="p1">My Profile</p>
+            </div>
+        </div>
+        <div id="profile_content">
+
+        </div>
+        <style>
+          body{
+            background-color: rgb(48, 21, 168);
+            font-size: medium;
+            font-style: oblique;
+            color: blueviolet;
+            border-radius: 10;
+            height: 100;
+            margin: 0%;
+            text-align: justify;
+          }
+        </style>
+
+ <script>
+    const my_profile = {
+        firstname: 'Vishal B', 
+        lastname: 'Bangari',
+        email_id: 'vishalbangari9@gmail.com',
+        phone: '940-758-0893',
+        driving_License: '', 
+        DOB: '02/19/1999',
+        city: 'denton',
+        state: 'Texas',
+        postal_code: '76201',
+        hobbies: {sport: 'Boxing', art: 'Archery', talent: 'Beat Boxing'}
+    };
+
+    const printLastHobbyAndProfile = () => {
+        const hobbies = my_profile.hobbies;
+        const lastHobby = Object.keys(hobbies).pop();
+        console.log('Last Hobby:', hobbies[lastHobby]);
+
+        const remainingProfile = { ...my_profile };
+        //delete remainingProfile.hobbies;
+        //console.log('Remaining Profile:', remainingProfile);
+
+        const string = Object.entries(remainingProfile)
+            .map(entry => {
+                if (typeof entry[1] === 'object') {
+                    const nestedEntries = Object.entries(entry[1]);
+                    const nestedString = nestedEntries
+                        .map(nestedEntry => nestedEntry[0] + ': ' + nestedEntry[1] + ';')
+                        .join('</br>');
+                    return entry[0] + ':</br> {' + nestedString + '}';
+                } else {
+                    return entry[0] + ': ' + entry[1] + ';';
+                }
+            })
+            .join('</br>');
+
+        document.getElementById("profile_content").innerHTML = string;
+    };
+
+    printLastHobbyAndProfile();
+
+
+
+
+        </script>
+        
+    </body>
+</html>
