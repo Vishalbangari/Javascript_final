@@ -1,0 +1,20 @@
+<html>
+    <head>
+<script>
+    let amount=100;
+var environments = [
+  { environment: "dev", sendAmount: 100 + (100 * 0.1) },   
+  { environment: "test", sendAmount: 100 + (100 * 0.2) },  
+  { environment: "stage", sendAmount: 100 + (100 * 0.3) }, 
+  { environment: "prod", sendAmount: 100 + (100 * 0.05) }  
+];
+
+
+for (var i = 0; i < environments.length; i++) {
+  var environment = environments[i].environment;
+  var sendAmount = environments[i].sendAmount;
+  console.log("Sending amount for", environment + ":", sendAmount);
+}
+</script>
+    </head>
+</html>
