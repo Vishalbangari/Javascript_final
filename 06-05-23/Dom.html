@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <style>
+            .code-container {
+      background-color: rgb(252, 6, 6);
+      padding: 15px;
+      font-family: cursive;
+            }
+        </style>
+
+        
+        <title>Using Dom: Adding all the details</title>
+
+        <div class="code-container">
+            <pre><code id="js-code"></code></pre>
+          </div>
+          <script src="script.js"></script>
+
+
+        <form id="form">
+            <input type="FirstName" id="Fn" placeholder = "FirstName" required>
+        </br>
+            <input type="LastName" id="Ln" placeholder = "LastName" required>
+        </br>
+            <input type="Dateofbirth" id="Dob" placeholder = "DOB" required>
+        </br>
+            <input type="email" id ="email" placeholder = "Email" required>
+        </br>
+            <input type="Phonenumber" id="phn" placeholder = "PhoneNum" required>
+        </br>
+            <input type="Submit" value="Click Me!">
+        </br>
+        </form>
+        
+        <script>
+            var form = document.getElementById('form')
+            // const Details = document.getElementById("myBtn");
+
+            // Details.addEventListener("click", function(e){
+               //  const name = prompt("What is your name")
+
+                // document.body.innerHTML = "<h1> Welcome, " + name + "!</h1";
+
+                // console.log(name);
+           //  });
+
+        </script>
+
+    </body>
+    <script>
+        var form = document.getElementById("form")
+
+        form.addEventListener("submit", function(event){
+         event.preventDefault()
+
+         var FirstName = document.getElementById('Fn').value
+
+         console.log(FirstName)
+
+         var LastName = document.getElementById('Ln').value
+
+        console.log(LastName)
+
+         var email = document.getElementById('email').value
+
+         console.log (email)
+
+         var Phonenumber = document.getElementById('phn').value
+
+         console.log (Phonenumber)
+        })
+
+     </script>
+</html>

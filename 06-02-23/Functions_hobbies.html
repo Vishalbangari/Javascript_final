@@ -7,31 +7,32 @@
   <div id="hobbies-container"></div>
 
   <script>
-    let hobbies = ["Podcasts", "Sports", "Painting"];
+    const hobbies = ["podcasts", "sports", "painting"];
 
-function displayHobbies() {
+function showHobbies() {
   console.log(hobbies);
 }
 
 function addHobby(newHobby) {
   hobbies.push(newHobby);
-  console.log("New hobby added:", newHobby);
-  displayHobbies();
+  console.log("New hobby has been pushed:", newHobby);
+  showHobbies();
 }
 
 function deleteHobby(hobbyToDelete) {
   const index = hobbies.indexOf(hobbyToDelete);
   if (index !== -1) {
-    hobbies.splice(index, 1);
-    console.log("Hobby deleted:", hobbyToDelete);
-    displayHobbies();
+    hobbies.splice( 
+      index, 1);
+    console.log("Hobby has been deleted:", hobbyToDelete);
+    showHobbies();
   } else {
     console.log("Hobby not found:", hobbyToDelete);
   }
 }
 
 
-displayHobbies(); 
+showHobbies(); 
 addHobby("Pooker"); 
 deleteHobby("Painting"); 
 deleteHobby("Swimming"); 
