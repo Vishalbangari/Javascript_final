@@ -1,0 +1,19 @@
+<h2>Signup</h2>
+
+    <label for="firstname">Firstname:</label>
+  <input type="text" id="firstrname" name="Firstname" placeholder="First Name" [(ngModel)]="profile.firstname"><br>
+  <label for="lastname">Lastname:</label>
+  <input type="text" id="lastname" name="Lastname" placeholder="Last Name" [(ngModel)]="profile.lastname"><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="Email" placeholder="Email" [(ngModel)]="profile.email"><br>
+  <label for="mobile">Mobile:</label>
+  <input type="number" id="mobile" name="ph no" [(ngModel)]="profile.mobile"><br>
+
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" [(ngModel)]="profile.username"><br>
+  
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" [(ngModel)]="profile.password"><br>
+  
+  <button (click)="handleSignup()" type="submit">Signup</button>
+
